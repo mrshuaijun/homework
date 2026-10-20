@@ -69,9 +69,12 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: Colors.surface,
+    alignItems: 'center',
   },
   header: {
     height: 56,
+    width: '100%',
+    maxWidth: 750,
     paddingHorizontal: Spacing.margin,
     flexDirection: 'row',
     alignItems: 'center',
@@ -127,8 +130,12 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     flex: 1,
+    width: '100%',
   },
   scrollContent: {
+    width: '100%',
+    maxWidth: 750,
+    alignSelf: 'center',
     padding: Spacing.margin,
     gap: Spacing.spaceMd,
   },
