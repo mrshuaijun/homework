@@ -1,0 +1,7 @@
+name = "serene-ledger-mobile"
+
+[site]
+bucket = "./dist"
+
+[build]
+command = "npm run build"
