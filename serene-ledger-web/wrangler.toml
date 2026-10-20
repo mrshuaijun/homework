@@ -1,0 +1,7 @@
+name = "serene-ledger-web"
+
+[site]
+bucket = "./dist"
+
+[build]
+command = "npm run build"

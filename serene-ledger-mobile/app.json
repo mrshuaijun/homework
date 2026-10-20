@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "简记账 - Serene Ledger",
+    "slug": "serene-ledger-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "serene-ledger",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#121316"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.sereneledger.app",
+      "backgroundColor": "#121316"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#121316"
+      },
+      "package": "com.sereneledger.app"
+    },
+    "plugins": ["expo-router", "expo-font"]
+  }
+}
