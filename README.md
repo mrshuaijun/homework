@@ -98,20 +98,26 @@ bucket = "./dist"
 command = "npm run build"
 ```
 
-- **方式一：通过 GitHub 自动构建（推荐）**
+- **方式一：直接使用预编译产物部署（零等待，秒级上线）**
   1. 打开 [Cloudflare Dashboard](https://dash.cloudflare.com/) -> **Workers & Pages** -> **Create application** -> **Pages**。
   2. 选择关联当前 Git 仓库。
-  3. 配置构建参数：
+  3. 配置参数：
+     - **Framework Preset**: `None`
+     - **Build Command**: 留空（不填）
+     - **Build Output Directory**: 填 `serene-ledger-web/dist`（PC 端）或 `serene-ledger-mobile/dist`（移动 Web 端）
+  4. 点击 **Save and Deploy** 即可立即上线。
+
+- **方式二：通过 GitHub 自动构建**
+  1. 配置构建参数：
      - **Framework Preset**: `Vite`
      - **Root Directory**: `serene-ledger-web`
      - **Build Command**: `npm run build`
      - **Build Output Directory**: `dist`
-  4. 点击 **Save and Deploy**，即可自动生成全球加速访问链接。
+  2. 点击 **Save and Deploy**，由 Cloudflare 云端完成安装与编译。
 
-- **方式二：通过 Wrangler CLI 直接发布**
+- **方式三：通过 Wrangler CLI 命令行直接发布**
   ```bash
   cd serene-ledger-web
-  npm run build
   npx wrangler pages deploy dist --project-name=serene-ledger-web
   ```
 
